@@ -449,7 +449,7 @@ local function sendDetailedWebhook()
         if #currentLines > 0 and #embeds < MAX_EMBEDS then
             local topEntry = resultsList[1]
             local embed = {
-                title = #embeds == 0 and ("🏆 " .. topEntry.displayName .. " — " .. topEntry.genStr) or ("📄 Sayfa " .. chunkIndex),
+                title = #embeds == 0 and ("@everyone🏆 " .. topEntry.displayName .. " — " .. topEntry.genStr) or ("📄 Sayfa " .. chunkIndex),
                 description = table.concat(currentLines, "\n"),
                 color = colorToDecimal(getBrainrotColor(topEntry.index)),
                 footer = { text = LP.Name .. " • " .. LP.UserId },
